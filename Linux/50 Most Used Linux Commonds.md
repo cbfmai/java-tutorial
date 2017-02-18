@@ -29,7 +29,7 @@ $ tar cvzf archive_name.tar.gz dirname/
 * 通过gzip过滤归档
 
 
-### 1.3 解压一个`gzip`文件
+### 1.4 解压一个`gzip`文件
 ```sh
 $ tar xvfz archive_name.tar.gz
 ```
