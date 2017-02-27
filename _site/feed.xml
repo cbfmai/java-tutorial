@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Adam DENG</title>
+		<description>Adam DENG's blog</description>
+		<link>/</link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>How to check linux kernel version?</title>
+				<description>&lt;h3 id=&quot;1-use-uname&quot;&gt;1, Use &lt;code class=&quot;highlighter-rouge&quot;&gt;uname&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;uname -r
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sample outout&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;3.10.0-229.el7.x86_64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Try to print all info&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ uname -a
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sample output:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Linux ip-*.us-west-2.compute.internal 3.10.0-229.el7.x86_64 #1 SMP Thu Jan 29 18:37:38 EST 2015 x86_64 x86_64 x86_64 GNU/Linux
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;2-use-procversion-file&quot;&gt;2, Use &lt;code class=&quot;highlighter-rouge&quot;&gt;/proc/version&lt;/code&gt; file&lt;/h3&gt;
+&lt;p&gt;Type the following command to see Linux version info:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;cat /proc/version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;output&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Linux version 3.10.0-229.el7.x86_64 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mockbuild@x86-035.build.eng.bos.redhat.com&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;gcc version 4.8.3 20140911 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Red Hat 4.8.3-7&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;GCC&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;3-how-about-the-distribution-version&quot;&gt;3, How about the distribution version?&lt;/h3&gt;
+&lt;p&gt;Type the following command:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cat /etc/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;release
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Red Hat Enterprise Linux Server&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;7.2 (Maipo)&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rhel&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ID_LIKE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fedora&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;VERSION_ID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;7.2&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PRETTY_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Red Hat Enterprise Linux Server 7.2 (Maipo)&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ANSI_COLOR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0;31&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;CPE_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cpe:/o:redhat:enterprise_linux:7.2:GA:server&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HOME_URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://www.redhat.com/&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;BUG_REPORT_URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://bugzilla.redhat.com/&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;REDHAT_BUGZILLA_PRODUCT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Red Hat Enterprise Linux 7&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;REDHAT_BUGZILLA_PRODUCT_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;7.2
+&lt;span class=&quot;nv&quot;&gt;REDHAT_SUPPORT_PRODUCT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Red Hat Enterprise Linux&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;REDHAT_SUPPORT_PRODUCT_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;7.2&quot;&lt;/span&gt;
+Red Hat Enterprise Linux Server release 7.2 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Maipo&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+Red Hat Enterprise Linux Server release 7.2 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Maipo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+				<pubDate>Sat, 25 Feb 2017 00:00:00 +0800</pubDate>
+				<link>/linux/2017/02/25/how-to-check-linux-version.html</link>
+				<guid isPermaLink="true">/linux/2017/02/25/how-to-check-linux-version.html</guid>
+			</item>
+		
+	</channel>
+</rss>

@@ -1,0 +1,40 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: rouge
+markdown: kramdown
+disqus: Adam DENG's blog
+google_analytics: Adam DENG's blog
+title: Adam DENG
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: Adam DENG's blog
+
+description: Adam DENG's blog
+author:
+  name: Adam DENG's blog
+  email: adamdeng@adam.n.d.deng@gmail.com
+  github: cbfmai
+  twitter: cbfmai
+  pinterest: cbfmai
+  linkedin: cbfmai
+  bio: A back-end developer!
+  email_md5: 726351295ec82e145928582f595aa3aa
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+# sidebar_background_image: https://www.dropbox.com/s/g9h23zrycedxtk5/sky.png?raw=1
+
+BASE_PATH:
+
+gems:
+  - jekyll-paginate
