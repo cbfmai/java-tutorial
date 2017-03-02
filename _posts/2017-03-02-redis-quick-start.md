@@ -7,9 +7,6 @@ fullview: false
 comments: true
 ---
 
-# Redis快速入门
-
----
 
 这是一个快速入门文档，面向没有Redis先前经验的人。阅读本文档将帮助你：
 * `redis-cli` 使用方法
@@ -101,12 +98,12 @@ sudo mkdir /var/redis/6379
 ```
 
 * Edit the configuration file, making sure to perform the following changes:
-- [x] Set `daemonize` to yes (by default it is set to no).
-- [x] Set the `pidfile` to `/var/run/redis_6379.pid` (modify the port if needed).
-- [x] Change the `port` accordingly. In our example it is not needed as the default port is already 6379.
-- [x] Set your preferred `loglevel`.
-- [x] Set the `logfile` to /var/log/redis_6379.log
-- [x] Set the `dir` to /var/redis/6379 (very important step!)
+> * Set `daemonize` to yes (by default it is set to no).
+> * Set the `pidfile` to `/var/run/redis_6379.pid` (modify the port if needed).
+> * Change the `port` accordingly. In our example it is not needed as the default port is already 6379.
+> * Set your preferred `loglevel`.
+> * Set the `logfile` to /var/log/redis_6379.log
+> * Set the `dir` to /var/redis/6379 (very important step!)
 
 * You are done! Now you can try running your instance with:
 ```sh
