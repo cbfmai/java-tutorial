@@ -7,8 +7,6 @@ fullview: false
 comments: true
 ---
 
-## 概况
-
 本教程使用`Community Edition`安装`MongoDB`在`Red Hat Enterprise Linux`或6和7使用`CentOS`的`Linux`版本`rpm`包。
 
 ## 1， 配置 `yum` 源
