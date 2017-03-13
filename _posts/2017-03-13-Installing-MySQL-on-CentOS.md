@@ -25,8 +25,7 @@ vim /etc/yum.repos.d/mysql-community.repo
 name=MySQL 5.7 Community Server
 baseurl=http://repo.mysql.com/yum/mysql-5.7-community/el/6/$basearch/
 enabled=1
-gpgcheck=1
-gpgkey=http://springdale.math.ias.edu/data/puias/6/x86_64/os/RPM-GPG-KEY-puias
+gpgcheck=0
 ```
 
 
