@@ -15,7 +15,7 @@ MySQL provides a Yum-style software repository for the following Linux distribut
 ## 1, 添加`Yum`源
 这个有多种方法
 * a, 从官方下载`rpm` https://dev.mysql.com/downloads/repo/yum/
-* b, 创建新的`repo`文件
+* b, 创建新的`repo`文件, 在这里屏蔽了`gpdcheck`
 
 ```sh
 vim /etc/yum.repos.d/mysql-community.repo
@@ -74,7 +74,10 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
 $ vim /etc/mysql/my.cnf
 ```
 
-注释如下
+有些可能是在 `/etc/my.cnf`
+
+
+注释如下(如果有)
 ```
 #bind-address           = 127.0.0.1
 #skip-networking
