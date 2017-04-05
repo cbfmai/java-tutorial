@@ -93,4 +93,23 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'%' IDENTIFIED BY 'PASSWORD' WI
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'1.2.3.4' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
 ```
 
+## 6, 默认 `utf8mb4` 编码
+
+修改 `/etc/my.cnf`
+
+```sh
+[mysqld]
+collation-server = utf8mb4_unicode_ci
+init-connect='SET NAMES utf8mb4'
+character-set-server = utf8mb4
+character-set-client-handshake = FALSE
+
+[client]
+default-character-set = utf8mb4
+[mysql]
+default-character-set = utf8mb4
+```
+
+重启`mysqld`服务， `service mysqld restart`
+
 ## 6, For the more official documents, please refer to [Online Doc](https://dev.mysql.com/doc/refman/5.7/en/linux-installation-yum-repo.html#yum-repo-installing-mysql)
