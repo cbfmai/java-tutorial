@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux HTML viewport
+title: HTML viewport
 categories: [HTML]
 tags: [HTML]
 fullview: false
