@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Redis快速入门
-categories: [server]
-tags: [server]
+categories: [Linux, server]
+tags: [Linux, server]
 fullview: false
 comments: true
 ---

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: How to check linux kernel version?
-categories: [linux]
-tags: [linux]
+categories: [Linux]
+tags: [Linux]
 fullview: false
 comments: true
 ---

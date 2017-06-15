@@ -1,8 +1,8 @@
 ---
 layout: post
 title: MongoDB installment on CentOS
-categories: [linux]
-tags: [linux]
+categories: [Linux]
+tags: [Linux]
 fullview: false
 comments: true
 ---

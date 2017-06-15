@@ -1,8 +1,8 @@
 ---
 layout: post
 title: MySQL installment on CentOS
-categories: [linux]
-tags: [linux]
+categories: [Linux]
+tags: [Linux]
 fullview: false
 comments: true
 ---
