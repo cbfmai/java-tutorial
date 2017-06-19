@@ -109,3 +109,14 @@ sudo mkdir /var/redis/6379
 ```sh
 sudo /etc/init.d/redis_6379 start
 ```
+
+
+# 加密登录
+
+```sh
+sudo vim /etc/init.d/redis
+
+
+--- 在stop命令中加上密码
+$CLIEXEC -a "yourpassword" -p ${REDISPORT} shutdown
+```
