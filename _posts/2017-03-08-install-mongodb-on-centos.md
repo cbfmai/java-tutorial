@@ -58,44 +58,60 @@ You can optionally ensure that `MongoDB` will start following a system reboot by
 sudo chkconfig mongod on
 ```
 
-## 4. 加密连接
-### 4.1 连接上`Mongodb`之后， 创建`admin`账号。
+### 3.2 开启远程访问
+
+#### 3.2.1 创建用户
+First `ssh` into your server and enter the `mongo` shell by typing mongo. 
+For this example, I will set up a user named `ian` and give that user read & write access to the `cool_db` database.
+
 ```sh
-use admin
-db.createUser(
-  {
-    user: "root",
-    pwd: "***************",
-    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
-  }
-)
+use cool_db
+
+db.createUser({
+    user: 'ian',
+    pwd: 'secretPassword',
+    roles: [{ role: 'readWrite', db:'cool_db'}]
+})
+
 ```
 
-### 4.2 修改`/etc/mongod.conf`
-添加如下
+#### 3.2.2 关闭绑定本地`localhost` 及开启密码访问
+
 ```sh
+# network interfaces
+net:
+  port: 27017
+  #bindIp: 127.0.0.1  # Listen to local interface only, comment to listen on all interfaces.
+
 security:
-    authorization: enabled
+  authorization: 'enabled'
+
 ```
 
-### 4.3 重启`MongoDB`
+#### 3.2.3 重启服务
 ```sh
-service mongod restart
+[root@*** etc]# service mongod restart
+Stopping mongod:                                           [  OK  ]
+Starting mongod:                                           [  OK  ]
 ```
 
-### 4.4 创建相关账号
-```
-use user
-db.createUser(
- {
-   user: "user",
-   pwd: "*******",
-   roles: [
-      { role: "readWrite", db: "user" }
-   ]
- }
-)
+注意： 如果是`centos 7.X`, 需要修改防火墙
+
+```sh
+iptables -A INPUT -p tcp --dport 27017 -j ACCEPT
 ```
 
+或者只有指定ip能访问
+```sh
+iptables -A INPUT -s <ip-address> -p tcp --destination-port 27017 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -d <ip-address> -p tcp --source-port 27017 -m state --state ESTABLISHED -j ACCEPT
 
-## 5. For more details, please refer to the official [documentation](https://docs.mongodb.com/master/tutorial/install-mongodb-on-red-hat/); 
+iptables -A INPUT -s 192.168.161.200 -p tcp --destination-port 27017 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -d 192.168.161.200 -p tcp --source-port 27017 -m state --state ESTABLISHED -j ACCEPT
+```
+
+防火墙参考 [文档](https://docs.mongodb.com/manual/tutorial/configure-linux-iptables-firewall/)
+
+
+
+## 4. For more details, please refer to the official [documentation](https://docs.mongodb.com/master/tutorial/install-mongodb-on-red-hat/); 
