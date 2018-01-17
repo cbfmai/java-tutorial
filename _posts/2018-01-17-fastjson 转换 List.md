@@ -18,19 +18,18 @@ public abstract class JSON {
 }
 ```
 
-* 序列化：
+序列化：
 ```java
 String jsonString = JSON.toJSONString(obj);
 ```
 
-* 反序列化：
+反序列化：
 ```java
 VO vo = JSON.parseObject("...", VO.class);
 ```
 
-* 泛型反序列化：像 `List` 对象
+泛型反序列化：像 `List` 对象
 ```java
 import com.alibaba.fastjson.TypeReference;
-
 List<VO> list = JSON.parseObject("...", new TypeReference<List<VO>>() {});
 ```
