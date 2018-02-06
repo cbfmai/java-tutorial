@@ -10,6 +10,7 @@ comments: true
 ### 1， Get Oracle JDK 8
 
 1.1 打开`Oracle` jdk 官方网站 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
 1.2 下载
 
 ```sh
