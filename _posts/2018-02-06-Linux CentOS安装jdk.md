@@ -89,6 +89,7 @@ $ echo $PATH
 ### 4. 多`JDK`
 
 4.1 下载安装jdk 1.7
+
 4.2 使用 `alternatives`
 
 ```sh
@@ -118,6 +119,7 @@ At this point JAVA 8 has been successfully installed on your system. We also rec
 
 
 4.3 检查 Java version
+
 4.4 设置 `JAVA_HOME` `JRE_HOME` & `PATH`
 
 
@@ -125,9 +127,11 @@ At this point JAVA 8 has been successfully installed on your system. We also rec
 
 
 Other files and location where you can set Java variable and what are the difference
+
 (1) `/etc/profile` = To set environment variable to all users
 
 (2) `$HOME/.bashrc` = To set environment for login user.
+
 (3) `$HOME/.bash_profile` = To set environment for login user
 
 Note: `.bash_profile` is executed for login shells, while `.bashrc` is executed for interactive non-login shells.
