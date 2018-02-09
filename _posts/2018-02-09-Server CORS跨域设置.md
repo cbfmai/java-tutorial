@@ -44,6 +44,19 @@ location / {
 }
 ```
 
+简写版本
+
+```nginx
+add_header 'Access-Control-Allow-Origin' '*';
+add_header 'Access-Control-Allow-Credentials' 'true';
+add_header 'Access-Control-Allow-Headers' 'Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken';
+add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, DELETE';
+if ($request_method = 'OPTIONS') {
+    return 204;
+}
+```
+
+
 #### 2, `Apache`
 
 To add the `CORS` authorization to the header using Apache, simply add the following line inside either the
