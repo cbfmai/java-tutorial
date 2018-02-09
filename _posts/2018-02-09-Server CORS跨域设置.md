@@ -1,6 +1,6 @@
 ---
 layout: post
-title: `CORS`跨域设置
+title: CORS跨域设置
 categories: [Server,Nginx]
 tags: [Server,Nginx]
 fullview: false
