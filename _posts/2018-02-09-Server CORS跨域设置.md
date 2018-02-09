@@ -56,6 +56,77 @@ if ($request_method = 'OPTIONS') {
 }
 ```
 
+Full sample
+
+`nginx.conf`
+```sh
+user  nginx;
+worker_processes  1;
+
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+    client_max_body_size 20m;
+    client_body_timeout 60s;
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+    proxy_read_timeout 180s;    
+
+    #gzip  on;
+
+    include /etc/nginx/conf.d/*.conf;
+}
+
+```
+
+`api.conf`
+
+```sh
+server {
+    listen       80;
+    #server_name  localhost;
+    server_name api.xxx.com;	
+
+    #charset koi8-r;
+    #access_log  /var/log/nginx/log/host.access.log  main;
+    
+    add_header 'Access-Control-Allow-Origin' '*';
+    add_header 'Access-Control-Allow-Credentials' 'true';
+    add_header 'Access-Control-Allow-Headers' 'Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken';
+    add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, DELETE';
+    
+    if ($request_method = 'OPTIONS') {
+        return 204;
+    }
+
+    location / {
+        proxy_pass      http://127.0.0.1:8080;
+        index  index.html;
+        proxy_set_header        X-Real-IP       $remote_addr;
+        proxy_set_header        Host            $host;  
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+```
+
+
 
 #### 2, `Apache`
 
