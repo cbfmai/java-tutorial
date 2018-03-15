@@ -16,7 +16,6 @@ comments: true
 * 1, [Class.getResourceAsStream](https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getResourceAsStream-java.lang.String-)
 
 
-<div>
 <pre>public&nbsp;<a href="../../java/io/InputStream.html" title="class in java.io">InputStream</a>&nbsp;getResourceAsStream(<a href="../../java/lang/String.html" title="class in java.lang">String</a>&nbsp;name)</pre>
 <div class="block">Finds a resource with a given name.  The rules for searching resources
  associated with a given class are implemented by the defining class loader of the class.  This method
@@ -55,7 +54,6 @@ comments: true
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>JDK1.1</dd>
 </dl>
-</div>
 
 
 
