@@ -1,8 +1,8 @@
 ---
 layout: post
 title: CORS跨域设置
-categories: [Server,Nginx]
-tags: [Server,Nginx]
+categories: [Java]
+tags: [Java, Nginx]
 fullview: false
 comments: true
 ---

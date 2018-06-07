@@ -169,6 +169,15 @@ ALTER DATABASE DATAFILE  '/database/oracle/oradata/gsp/tbs_dm_data_002.dbf' resi
 ALTER TABLESPACE TBS_DM_DAT ADD DATAFILE '/database/oracle/oradata/gsp/tbs_dm_data_003.dbf' size 1921m;
 ```
 
+##### 5.5： 操作
+
+连接oracle linux server
+```
+su - oracle
+
+sqlplus as / sysdba
+```
+
 
 
 

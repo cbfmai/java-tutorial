@@ -1,8 +1,8 @@
 ---
 layout: post
 title: CentOS 安装 Jdk
-categories: [JAVA,Linux]
-tags: [JAVA,Linux]
+categories: [Linux]
+tags: [Linux]
 fullview: false
 comments: true
 ---

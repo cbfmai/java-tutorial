@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Flat array to tree
-categories: [JS]
-tags: [JS]
+categories: [Javascript]
+tags: [Javascript]
 fullview: false
 comments: true
 ---

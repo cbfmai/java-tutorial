@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Get the url parameters with native javascript
-categories: [js]
-tags: [js]
+categories: [Javascript]
+tags: [Javascript]
 fullview: false
 comments: true
 ---

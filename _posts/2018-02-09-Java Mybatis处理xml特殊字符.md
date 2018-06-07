@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Mybatis处理xml特殊字符
-categories: [JAVA,Mybatis]
-tags: [JAVA,Mybatis]
+categories: [Java]
+tags: [Java, MyBaties]
 fullview: false
 comments: true
 ---
