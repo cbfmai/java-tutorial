@@ -17,6 +17,7 @@
     <modules>
         <module>java8</module>
         <module>multithread</module>
+        <module>algorithm</module>
     </modules>
 
     <build>
