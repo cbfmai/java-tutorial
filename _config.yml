@@ -36,6 +36,6 @@ tags_path: tags.html
 
 # BASE_PATH: https://cbfmai.github.io/java-tutorial
 # BASE_PATH:
-BASE_PATH: http://blog.imdnd.com
+BASE_PATH: https://blog.imdnd.com
 gems:
   - jekyll-paginate
