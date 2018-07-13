@@ -7,11 +7,8 @@ fullview: false
 comments: true
 ---
 
-`SQL*Plus` 定义
+一、 `SQL*Plus` 定义
 
-> SQL*Plus: Release 11.2.0.1.0 Production
-
->  使用 SQL*Plus 执行 SQL, PL/SQL 和 SQL*Plus 语句。
 
     sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
 
@@ -86,7 +83,7 @@ comments: true
 
 
 
-常用的几种 `SQL*Plus` 登录方式
+二、 常用的几种 `SQL*Plus` 登录方式
 
 ```cmd
 sqlplus / as sysdba   --以操作系统权限认证的oracle sys管理员登陆
@@ -101,7 +98,7 @@ SQL> conn sys/password as sysdba
 
 ```
 
-使用`SQL*Plus` 远程登录
+三、 使用`SQL*Plus` 远程登录
 
 ```cmd
 sqlplus usr/pwd@//host:port/sid
