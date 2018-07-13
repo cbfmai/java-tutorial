@@ -11,17 +11,9 @@ comments: true
 
 > SQL*Plus: Release 11.2.0.1.0 Production
 
-  Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+>  使用 SQL*Plus 执行 SQL, PL/SQL 和 SQL*Plus 语句。
 
-  使用 SQL*Plus 执行 SQL, PL/SQL 和 SQL*Plus 语句。
-
-  用法 1: sqlplus -H | -V
-
-      -H             显示 SQL*Plus 版本和
-                     用法帮助。
-      -V             显示 SQL*Plus 版本。
-
-  用法 2: sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
+    sqlplus [ [<option>] [{logon | /nolog}] [<start>] ]
 
     <option> 为: [-C <version>] [-L] [-M "<options>"] [-R <level>] [-S]
 
@@ -90,6 +82,7 @@ comments: true
       使用将分配给脚本中的替代变量的指定参数
       从 Web 服务器 (URL) 或本地文件系统 (filename.ext)
       运行指定的 SQL*Plus 脚本。
+
 
 
 
